@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 75%;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.karussell {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.karussell img {
+    width: 100%;
+}
+
+.karussell .karussell_item,
+.karussell .karussell_item-visible {
+    display: none;
+}
+
+.karussell .karussell_item-visible {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: .6;}
+}
+
+.karussell .karussell_actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.karussell .karussell_actions button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(43, 226, 171, 0.521);
+    font-size: 2rem;
+    color: #0fe5ec;
+    margin: 0.5rem;
+}
